@@ -9,5 +9,5 @@ jobs:
       - users: actions/checkout@v2
       - name: docker build
         run: |
-          docker build ./MY-APP -t jilu/angular-app:1.0.0
-          
+          docker build ./my-app -t jilu/angular-app:1.0.0
+
