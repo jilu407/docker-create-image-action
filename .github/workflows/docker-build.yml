@@ -16,4 +16,8 @@ jobs:
       - name: docker build
         run: |
           docker build . -t jilu/angular-app:1.0.0
+          docker images
+      - name: docker push
+        run: |
+          docker push jilu/angular-app:1.0.0
 
