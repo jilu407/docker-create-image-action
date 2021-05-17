@@ -1,0 +1,13 @@
+name: docker build 
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - users: actions/checkout@v2
+      - name: docker build
+        run: |
+          docker build ./my-app -t jilu/angular-app:1.0.0
+
