@@ -15,9 +15,9 @@ jobs:
           docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
       - name: docker build
         run: |
-          docker build . -t jilu/angular-app:1.0.0
+          docker build . -t jilu407/angular-app:1.0.0
           docker images
       - name: docker push
         run: |
-          docker push jilu/angular-app:1.0.0
+          docker push jilu407/angular-app:1.0.0
 
