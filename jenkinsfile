@@ -1,0 +1,24 @@
+node {   def registry = 'registry.hub.docker.com/xxxxxx/test'
+   def registryCredential = 'dockerhub'
+    
+    stage('Git') {
+        git 'https://github.com/jilu407/docker-create-image-action.git'
+    }
+    stage('install depedency') {
+	  
+        
+		sh 'npm install' 
+    
+   }
+   stage('build packaage') {
+	  
+        
+		sh 'npm run build'
+   }
+   stage('run ansible play book') {
+	  
+        
+		sh 'ansible-playbook deploy-ansible.yml'
+   }
+}
+   
